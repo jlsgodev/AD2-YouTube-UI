@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yt_bg"
+    android:fitsSystemWindows="true"
+    tools:context=".WatchActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <ImageView
+        android:id="@+id/imgPlayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/thumbnail_desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_play"
+        android:contentDescription="@string/play_desc"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintBottom_toBottomOf="@id/imgPlayer"
+        app:layout_constraintEnd_toEndOf="@id/imgPlayer"
+        app:layout_constraintStart_toStartOf="@id/imgPlayer"
+        app:layout_constraintTop_toTopOf="@id/imgPlayer"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/seekBar"
+        app:layout_constraintStart_toStartOf="@id/guideStart" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progressTint="@color/yt_red"
+        android:thumbTint="@color/yt_red"
+        app:layout_constraintBottom_toBottomOf="@id/imgPlayer"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintStart_toStartOf="@id/guideStart" />
+
+    <ListView
+        android:id="@+id/listRelated"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPlayer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

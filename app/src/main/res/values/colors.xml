@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yt_red">#FF0000</color>
+    <color name="yt_bg">#FFFFFF</color>
+    <color name="yt_text">#0F0F0F</color>
+    <color name="yt_text_secondary">#606060</color>
+    <color name="yt_chip">#F2F2F2</color>
+    <color name="yt_chip_selected">#0F0F0F</color>
+    <color name="white">#FFFFFF</color>
+</resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yt_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_avatar"
+                android:backgroundTint="#E91E63"
+                android:gravity="center"
+                android:text="@string/my_initial"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/you_channel_name"
+                    android:textColor="@color/yt_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/you_channel_handle"
+                    android:textColor="@color/yt_text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/you_history"
+            android:textColor="@color/yt_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:layout_width="176dp"
+                    android:layout_height="99dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/thumbnail_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thumb_java" />
+
+                <ImageView
+                    android:layout_width="176dp"
+                    android:layout_height="99dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/thumbnail_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thumb_constraint" />
+
+                <ImageView
+                    android:layout_width="176dp"
+                    android:layout_height="99dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/thumbnail_desc"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thumb_lofi" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/rowHistory"
+            style="@style/YtRow">
+
+            <ImageView
+                style="@style/YtRowIcon"
+                android:contentDescription="@string/row_icon_desc"
+                android:src="@drawable/ic_history" />
+
+            <TextView
+                style="@style/YtRowText"
+                android:text="@string/you_history" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowPlaylists"
+            style="@style/YtRow">
+
+            <ImageView
+                style="@style/YtRowIcon"
+                android:contentDescription="@string/row_icon_desc"
+                android:src="@drawable/ic_playlist" />
+
+            <TextView
+                style="@style/YtRowText"
+                android:text="@string/you_playlists" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowVideos"
+            style="@style/YtRow">
+
+            <ImageView
+                style="@style/YtRowIcon"
+                android:contentDescription="@string/row_icon_desc"
+                android:src="@drawable/ic_library" />
+
+            <TextView
+                style="@style/YtRowText"
+                android:text="@string/you_videos" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowDownloads"
+            style="@style/YtRow">
+
+            <ImageView
+                style="@style/YtRowIcon"
+                android:contentDescription="@string/row_icon_desc"
+                android:src="@drawable/ic_download" />
+
+            <TextView
+                style="@style/YtRowText"
+                android:text="@string/you_downloads" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowWatchLater"
+            style="@style/YtRow">
+
+            <ImageView
+                style="@style/YtRowIcon"
+                android:contentDescription="@string/row_icon_desc"
+                android:src="@drawable/ic_watch_later" />
+
+            <TextView
+                style="@style/YtRowText"
+                android:text="@string/you_watch_later" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

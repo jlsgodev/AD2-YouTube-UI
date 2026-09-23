@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/txtWatchTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textColor="@color/yt_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtWatchMeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/yt_text_secondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWatchTitle" />
+
+    <TextView
+        android:id="@+id/txtWatchAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_avatar"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWatchMeta" />
+
+    <TextView
+        android:id="@+id/txtWatchChannel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/yt_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/btnSubscribe"
+        app:layout_constraintStart_toEndOf="@id/txtWatchAvatar"
+        app:layout_constraintTop_toTopOf="@id/txtWatchAvatar" />
+
+    <TextView
+        android:id="@+id/txtWatchSubs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/subscribers"
+        android:textColor="@color/yt_text_secondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/btnSubscribe"
+        app:layout_constraintStart_toEndOf="@id/txtWatchAvatar"
+        app:layout_constraintTop_toBottomOf="@id/txtWatchChannel" />
+
+    <Button
+        android:id="@+id/btnSubscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/yt_text"
+        android:text="@string/subscribe"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/txtWatchAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtWatchAvatar" />
+
+    <HorizontalScrollView
+        android:id="@+id/actionsScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWatchAvatar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <Button
+                android:id="@+id/btnLike"
+                style="@style/YtActionButton"
+                android:text="@string/like"
+                app:icon="@drawable/ic_like" />
+
+            <Button
+                android:id="@+id/btnShare"
+                style="@style/YtActionButton"
+                android:text="@string/share"
+                app:icon="@drawable/ic_share" />
+
+            <Button
+                android:id="@+id/btnDownload"
+                style="@style/YtActionButton"
+                android:text="@string/download"
+                app:icon="@drawable/ic_download" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/YtActionButton"
+                android:text="@string/save"
+                app:icon="@drawable/ic_playlist" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/txtMyAvatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/bg_avatar"
+        android:backgroundTint="#E91E63"
+        android:gravity="center"
+        android:text="@string/my_initial"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etComment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etComment" />
+
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="comment"
+        android:hint="@string/comment_hint"
+        android:imeOptions="actionSend"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtMyAvatar"
+        app:layout_constraintTop_toBottomOf="@id/actionsScroll" />
+
+    <TextView
+        android:id="@+id/txtNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/next_videos"
+        android:textColor="@color/yt_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etComment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
