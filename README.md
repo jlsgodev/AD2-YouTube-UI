@@ -20,8 +20,6 @@ Vídeo curto (cerca de 16 s) do app rodando no emulador: filtro por categoria, a
 
 https://github.com/user-attachments/assets/3905ad57-3c70-4029-989a-fd529dcb7b7f
 
-O link do vídeo precisa ficar sozinho na linha, com uma linha em branco antes e outra depois. Só assim o GitHub mostra o player.
-
 ## Elementos de interface utilizados
 
 **Tela inicial (`activity_main.xml`)**
