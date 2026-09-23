@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # YouTube UI – AD2
 
 Atividade de Aprendizagem a Distância 2 (AD2) da disciplina de Programação para Dispositivos Móveis (TSI – IFC Camboriú).
@@ -7,6 +13,14 @@ A proposta era implementar a interface gráfica de um aplicativo à escolha. Esc
 | Feed inicial | Filtro por categoria | Aba "Você" | Tela do player |
 |---|---|---|---|
 | ![Feed inicial](docs/tela-inicial.png) | ![Filtro Java](docs/filtro-java.png) | ![Aba Você](docs/tela-voce.png) | ![Player](docs/tela-player.png) |
+
+## Demonstração
+
+Vídeo curto (cerca de 16 s) do app rodando no emulador: filtro por categoria, abertura do player e a aba "Você".
+
+https://github.com/user-attachments/assets/3905ad57-3c70-4029-989a-fd529dcb7b7f
+
+O link do vídeo precisa ficar sozinho na linha, com uma linha em branco antes e outra depois. Só assim o GitHub mostra o player.
 
 ## Elementos de interface utilizados
 
